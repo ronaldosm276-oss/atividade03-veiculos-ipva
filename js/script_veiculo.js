@@ -1,0 +1,5 @@
+const modelo = document.querySelector('#modelo')
+const inputNome = document.querySelector('#nome')
+const inputNome = document.querySelector('#nome')
+const inputNome = document.querySelector('#nome')
+const inputNome = document.querySelector('#nome')
