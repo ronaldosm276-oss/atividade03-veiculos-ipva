@@ -1,0 +1,16 @@
+o QUE FAZER:
+
+aplicação voltada ao cadastro de veículos
+permite registrar informações importantes como modelo,
+marca, placa, ano de fabricação, valor do veículo, cor e
+tipo de combustível
+
+a aplicação também realiza cálculos
+automáticos relacionados a custos obrigatórios, como o
+seguro obrigatório e o IPVA. O seguro será fixado em 10% do
+valor do veículo para todos os casos, enquanto o IPVA será
+calculado de acordo com o tipo de combustível: veículos a
+gasolina pagam 20%, etanol 15%, bicombustíveis 10%, híbridos
+8% e elétricos 2%. Caso o veículo tenha mais de 20 anos de
+fabricação, ele será considerado isento de IPVA, sendo
+exibido esse status na listagem.
