@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJETO CÁLCULO - SEGURO E IPVA AUTOMOTIVO</title>
+    <link rel="stylesheet" href="">
+    <script src="js/script_veiculo.js" type="module" defer></script>
 </head>
 
 <body>
@@ -31,26 +33,38 @@
                 <br>
                 <h5>Tipo de combustível</h5>
 
-                <input type="radio" id="masc" name="genero" value="masc" required>
-                <label for="male">------</label>
-                <input type="radio" id="fem" name="genero" value="fem" required>
-                <label for="female">--------</label>
+                <input type="radio" id="gasolina" name="typecomb" value="gasolina" required>
+                <label for="gasolina">GASOLINA</label>
+
+                <input type="radio" id="etanol" 
+                name="typecomb" value="etanol" required>
+                <label for="etanol">ETANOL</label>
             
-                <input type="radio" id="masc" name="genero" value="masc" required>
-                <label for="male">------</label>
-                <input type="radio" id="fem" name="genero" value="fem" required>
-                <label for="female">--------</label>
+                <input type="radio" id="bio" name="typecomb" value="bio" required>
+                <label for="bio">BIO-COMBUSTÍVEL</label>
+
+                <input type="radio" id="hibrido" name="typecomb" value="hibrido" required>
+                <label for="hibrido">HIBRÍDO</label>
+
+                <input type="radio" id="eletrico" name="typecomb" value="eletrico" required>
+                <label for="eletrico">ELÉTRICO</label>
 
                 <br><br>
-                <button type="submit">Adicionar</button>
+                <button type="submit" id="submit">Adicionar</button>
+
                 <button type="reset">Limpar</button>
 
 
 
             </form>
 
-            <div id="div-resultado">
-
+            <div id="div-adicionar">
+                Cada item deve mostrar:
+                 Modelo;
+                 Marca;
+                 Placa;
+                 Idade do veículo;
+                Valor Seguro a pagar;
         </div>
 
 
