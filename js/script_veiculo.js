@@ -6,8 +6,7 @@ const valorVeiculo = document.querySelector('#valor')
 const botao = document.querySelector('#submit')
 const adicionar = document.querySelector('#div-adicionar ')
 const anoatual = 2026
-import  {calculoSeguro} from "./script_calculo.js"
-import  {calculoIPVA} from "./script_calculo.js"
+import  {calculoSeguro, calculoIpva} from "./script_calculo.js"
 
 //Isso poderia ser feito de forma mais inteligente e elegante com arrays e arrow function
 
@@ -51,10 +50,26 @@ botao.addEventListener('click', (evt) => {
         console.log(tipoComb.value)
         //obviamente esse parte aqui tive ajuda da ia
         let tempoFab = (anoatual - Number(anofabricacao.value))
-        adicionar.innerHTML = `${modelo.value}, ${marca.value}, ${placa.value}, ${tempoFab} tempo de fabricação ${tempoFab} anos, ${valorVeiculo.value}`
+
+        
+
+
+        adicionar.innerHTML = 
+
+        `
+
+        Modelo: ${modelo.value}, 
+        Marca: ${marca.value}, 
+        Placa: ${placa.value}, 
+        tempo de fabricação: ${tempoFab} anos, 
+        valor do veículo = ${valorVeiculo.value}, 
+        seguro = ${valorVeiculo.value * 0.1} reais, ipva
+
+
+        `
 
         console.log(tempoFab)
-        console.log(calculoIPVA)
+        console.log(calculoIpva)
         console.log(calculoSeguro)
 
 //inputIdade.value = ''
