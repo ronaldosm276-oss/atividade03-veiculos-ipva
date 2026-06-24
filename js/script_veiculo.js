@@ -1,12 +1,13 @@
+import { calculoSeguro, calculoIpva } from "./script_calculo.js"
+
 const modelo = document.querySelector('#modelo')
 const marca = document.querySelector('#marca')
 const placa = document.querySelector('#placa')
 const anofabricacao = document.querySelector('#ano')
 const valorVeiculo = document.querySelector('#valor')
-const botao = document.querySelector('#submit')
+const form = document.querySelector('#form')
 const adicionar = document.querySelector('#div-adicionar ')
 const anoatual = 2026
-import  {calculoSeguro, calculoIpva} from "./script_calculo.js"
 
 //Isso poderia ser feito de forma mais inteligente e elegante com arrays e arrow function
 
@@ -42,37 +43,42 @@ let tempoFab = 0
 
 
 
-botao.addEventListener('click', (evt) => {
-    //para que isso serve?
-      evt.preventDefault()
+form.addEventListener('submit', (evt) => {
+  //para que isso serve?
+  evt.preventDefault()
 
-        const tipoComb = document.querySelector('input[name="typecomb"]:checked')
-        console.log(tipoComb.value)
-        //obviamente esse parte aqui tive ajuda da ia
-        let tempoFab = (anoatual - Number(anofabricacao.value))
+  const tipoComb = document.querySelector('input[name="typecomb"]:checked')
+  console.log(tipoComb.value)
+  //obviamente esse parte aqui tive ajuda da ia
+  tempoFab = (anoatual - Number(anofabricacao.value))
 
-        
+  const ipvaResultado = calculoIpva(tempoFab, tipoComb.value, Number(valorVeiculo.value))
 
+  let ipvaNaSoma;
 
-        adicionar.innerHTML = 
+  if (ipvaResultado === "isento") {
+    ipvaNaSoma = 0;
+  } else {
+    ipvaNaSoma = ipvaResultado + ' reais';
+  }
 
+  const valorTotalFinal = Number(valorVeiculo.value) + calculoSeguro(Number(valorVeiculo.value)) + ipvaNaSoma + ' reais'
+
+  adicionar.innerHTML +=
+
+    `
+        <p>
+        Modelo: ${modelo.value},
+        Marca: ${marca.value},
+        Placa: ${placa.value},
+        tempo de fabricação: ${tempoFab} anos,
+        valor do veículo = ${valorVeiculo.value},
+        seguro = ${calculoSeguro(Number(valorVeiculo.value))} reais,
+        ipva = ${ipvaResultado}
+        valor total = ${valorTotalFinal}
+        </p><hr>
         `
-
-        Modelo: ${modelo.value}, 
-        Marca: ${marca.value}, 
-        Placa: ${placa.value}, 
-        tempo de fabricação: ${tempoFab} anos, 
-        valor do veículo = ${valorVeiculo.value}, 
-        seguro = ${valorVeiculo.value * 0.1} reais, ipva
-
-
-        `
-
-        console.log(tempoFab)
-        console.log(calculoIpva)
-        console.log(calculoSeguro)
-
-//inputIdade.value = ''
-//inputNome.value = '' ; para resetar??
+        //p de paragrafo e hr para colocar aquelas linha
+  document.querySelector('#form').reset();
 
 })

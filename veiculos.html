@@ -7,12 +7,13 @@
     <title>PROJETO CÁLCULO - SEGURO E IPVA AUTOMOTIVO</title>
     <link rel="stylesheet" href="">
     <script src="js/script_veiculo.js" type="module" defer></script>
+    <!-- demorei a ver que tinha esquecido module e defer...-->
 </head>
 
 <body>
     <h3>OBJETIVO:</h3>
     <div id="geral">
-        <div id="form">
+        <div id="abriga-form">
             <form id="form">
                 <label for="modelo">Modelo</label>
                 <input type="text" name="modelo" id="modelo" required>
@@ -28,7 +29,7 @@
                 <br>
                 <label for="valor">Valor de Mercado do Veículo</label>
                 <input type="number" name="valor" id="valor" required>
-                
+
                 <br>
                 <br>
                 <h5>Tipo de combustível</h5>
@@ -36,10 +37,10 @@
                 <input type="radio" id="gasolina" name="typecomb" value="gasolina" required>
                 <label for="gasolina">GASOLINA</label>
 
-                <input type="radio" id="etanol" 
+                <input type="radio" id="etanol"
                 name="typecomb" value="etanol" required>
                 <label for="etanol">ETANOL</label>
-            
+
                 <input type="radio" id="bio" name="typecomb" value="bio" required>
                 <label for="bio">BIO-COMBUSTÍVEL</label>
 

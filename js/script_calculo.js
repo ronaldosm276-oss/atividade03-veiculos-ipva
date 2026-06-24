@@ -1,29 +1,26 @@
 
 export function calculoIpva(tempoFab, tipoComb, valorVeiculo) {
+    //Só peguei essa parte de export function var(a,b,c) por conta de ajuda de IA, preciso estudar mais sobre
     if (tempoFab >= 20) {
         return "isento"
     }
 
     else if (tipoComb == 'gasolina') {
-        return valorVeiculo * 0.2
+        return Number(valorVeiculo) * 0.2
     }
 
     else if (tipoComb == 'etanol') {
-        return valorVeiculo * 0.15
+        return Number(valorVeiculo) * 0.15
     }
 
     else if (tipoComb == 'bio'){
-        return valorVeiculo* 0.1
+        return Number(valorVeiculo)* 0.1
     }
     else if (tipoComb == 'hibrido')
-        return valorVeiculo * 0.08
-
-    else if (tipoComb == 'hibrido') {
-        return valorVeiculo* 0.08
-    }
+        return Number(valorVeiculo) * 0.08
 
     else if (tipoComb == 'eletrico') {
-        return valorVeiculo * 0.02
+        return Number(valorVeiculo) * 0.02
     }
 }
 
