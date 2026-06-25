@@ -5,13 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PROJETO CÁLCULO - SEGURO E IPVA AUTOMOTIVO</title>
-    <link rel="stylesheet" href="">
+    <link rel="stylesheet" href="css/style_veiculo.css">
     <script src="js/script_veiculo.js" type="module" defer></script>
     <!-- demorei a ver que tinha esquecido module e defer...-->
 </head>
 
 <body>
-    <h3>OBJETIVO:</h3>
+    <h3>OBJETIVO: calcular gastos com ipva e seguro</h3>
     <div id="geral">
         <div id="abriga-form">
             <form id="form">
@@ -25,31 +25,28 @@
                 <input type="text" name="placa" id="placa" required>
                 <br>
                 <label for="ano">Ano de Fabricação</label>
-                <input type="number" name="ano" id="ano" required>
+                <input type="number" name="ano" id="ano"required>
                 <br>
                 <label for="valor">Valor de Mercado do Veículo</label>
                 <input type="number" name="valor" id="valor" required>
 
-                <br>
-                <br>
+                <br><br>
                 <h5>Tipo de combustível</h5>
 
                 <input type="radio" id="gasolina" name="typecomb" value="gasolina" required>
                 <label for="gasolina">GASOLINA</label>
 
-                <input type="radio" id="etanol"
-                name="typecomb" value="etanol" required>
+                <input type="radio" id="etanol" name="typecomb" value="etanol" required>
                 <label for="etanol">ETANOL</label>
 
                 <input type="radio" id="bio" name="typecomb" value="bio" required>
                 <label for="bio">BIO-COMBUSTÍVEL</label>
-
+                <br>
                 <input type="radio" id="hibrido" name="typecomb" value="hibrido" required>
                 <label for="hibrido">HIBRÍDO</label>
 
                 <input type="radio" id="eletrico" name="typecomb" value="eletrico" required>
                 <label for="eletrico">ELÉTRICO</label>
-
                 <br><br>
                 <button type="submit" id="submit">Adicionar</button>
 
@@ -61,15 +58,17 @@
 
             <div id="div-adicionar">
                 Cada item deve mostrar:
-                 Modelo;
-                 Marca;
-                 Placa;
-                 Idade do veículo;
+                Modelo;
+                Marca;
+                Placa;
+                Idade do veículo;
                 Valor Seguro a pagar;
+                Ipva
+                <hr>
+            </div>
+
+
         </div>
-
-
-    </div>
 </body>
 
 </html>

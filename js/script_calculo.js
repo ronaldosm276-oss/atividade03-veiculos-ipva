@@ -1,6 +1,6 @@
 
 export function calculoIpva(tempoFab, tipoComb, valorVeiculo) {
-    //Só peguei essa parte de export function var(a,b,c) por conta de ajuda de IA, preciso estudar mais sobre
+    //Só peguei essa parte de export function var(a,b,c) por conta de ajuda de IA, preciso estudar mais sobre, a lógica eu fiz
     if (tempoFab >= 20) {
         return "isento"
     }
