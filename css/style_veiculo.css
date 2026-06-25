@@ -1,10 +1,8 @@
 #geral{
     width: 500px;
-    min-height: 600px;
+    min-height: 500px;
     margin: 20px auto;
-    border: solid 1px #718282; 
-    padding: 25px;
-    border-radius: 8px;
+
 }
 
 h3{
@@ -13,36 +11,53 @@ h3{
     letter-spacing: 5px;
 }
 
-#div-form, #div-lista-pessoas{
+#abriga-form, #div-adicionar{
     margin: 20px 0px;
     padding: 5px;
 }
 
 form{
-    background-color: #718282;
-    padding: 25px;
+    background-color: aliceblue;
+    padding: 20px;
     border-radius: 8px;
-    color: #ffffff;
+    color: black;
+    border: 1px solid #000000;
 }
 
-label, input{
-    display: block;
-    margin: 10px 0px;
-    width: 370px;
-    height: 30px;
-    font-size: 1.2em;
-    padding: 0px 15px;
+label{
+    display: inline-block;
+    margin: 10px 0px 5px 0px;
+    font-weight: bold;
+}
+
+input {
+    display: inline-block;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+input[type="radio"] {
+    display: inline;
+    width: auto;
+    height: auto;
+    cursor: pointer;
+    margin-right: 5px;
 }
 
 button{
-    margin: 20px 0px;
-    width: 200px;
+    margin-top: 20px;
+    margin-right: 10px;
+    width: 150px;
     height: 35px;
     cursor: pointer;
+    border: 1px solid #000000;
+    border-radius: 4px;
 }
 
-#div-lista-pessoas{
-    background-color: #91b9dc;
-    border-radius: 5px;
-    padding: 25px;
+#div-adicionar{
+    background-color: rgb(134, 207, 255);
+    border-radius: 4px;
+    border: 1px solid #000000;
+
 }
